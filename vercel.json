@@ -1,7 +1,12 @@
 {
     "version": 2,
     "builds": [
-      { "src": "src/app.js", "use": "@now/node" }
+      { "src": "src/server.js", "use": "@now/node" }
+    ],
+    "routes": [
+      { "src": "/public/(.*)", "dest": "/public/$1" },
+      { "src": "/templates/(.*)", "dest": "/templates/$1" },
+      { "src": "/(.*)", "dest": "/src/$1" }
     ]
   }
   
