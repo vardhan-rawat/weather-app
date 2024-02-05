@@ -2,7 +2,6 @@ const request = require('request')
 const apiKey = 'd3a8a502c1d2f21921b15d01cb7bc706';
 const baseUrl = process.env.NODE_ENV === 'production' ? 'https://api.weatherstack.com/current' : 'http://localhost:3000/current';
 
-const url = `${baseUrl}?access_key=${apiKey}&query=${latitude},${longitude}`;
 
 
 const forecast = (latitude, longitude, callback) => {
