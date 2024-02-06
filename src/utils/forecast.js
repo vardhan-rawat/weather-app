@@ -1,12 +1,8 @@
 const request = require('request')
-const apiKey = 'd3a8a502c1d2f21921b15d01cb7bc706';
-const baseUrl = process.env.NODE_ENV === 'production' ? 'https://api.weatherstack.com/current' : 'http://localhost:3000/current';
-
-
 
 const forecast = (latitude, longitude, callback) => {
+    const url = 'http://api.weatherstack.com/current?access_key=d3a8a502c1d2f21921b15d01cb7bc706&query=' + latitude + ',' + longitude
 
-    const url = `${baseUrl}?access_key=${apiKey}&query=${latitude},${longitude}`;
     request({ url: url, json: true }, (error, response) => {
         if (error) {
             callback('Unable to connect to weather service!', undefined)
