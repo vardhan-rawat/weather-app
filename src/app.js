@@ -29,7 +29,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
+        title: 'About',
         name: 'Vardhan Singh Rawat',
         body:'Weather forecast made using weatherstack api.'
     })
@@ -37,7 +37,6 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'Help Text',
         title: 'Help',
         name: 'Vardhan Singh Rawat'
     })
